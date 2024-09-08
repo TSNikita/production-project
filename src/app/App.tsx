@@ -1,10 +1,10 @@
 import {Link, Route, Routes } from 'react-router-dom';
 import './styles/index.scss'
 
-import { AboutPageLazy } from './pages/AboutPage/AboutPage.lazy';
-import { MainPageLazy } from './pages/MainPage/MainPage.lazy';
-import { Suspense, useState } from 'react';
-import { useThemes } from './themes/useThemes';
+import { Suspense } from 'react';
+import { useThemes } from './providers/ThemeProvider';
+import { AboutPageLazy } from 'pages/AboutPage';
+import { MainPageLazy } from 'pages/MainPage';
 
 function App() {
 const { themes, toogleThemes } = useThemes()
@@ -27,4 +27,3 @@ const { themes, toogleThemes } = useThemes()
 
 export default App;
 
-// посмотрел 7 урок 6-22min
